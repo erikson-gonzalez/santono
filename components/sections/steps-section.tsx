@@ -21,29 +21,26 @@ function TrackDownload({ url, label }: { url: string; label: string }) {
   }
 
   const toggle = () => {
+    const audio = audioRef.current
+    if (!audio) return
+
     if (playing) {
-      audioRef.current?.pause()
+      audio.pause()
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
       setPlaying(false)
       return
     }
 
-    // Create audio lazily on first tap — required for iOS Safari
-    if (!audioRef.current) {
-      audioRef.current = new Audio(url)
-      audioRef.current.loop = true
-    }
-
-    audioRef.current.play().then(() => {
+    audio.play().then(() => {
       rafRef.current = requestAnimationFrame(tick)
       setPlaying(true)
-    }).catch(() => {
-      // Silently ignore — browser policy blocked playback
-    })
+    }).catch(() => {})
   }
 
   return (
     <>
+      {/* Hidden audio element — more reliable on iOS Safari than new Audio() */}
+      <audio ref={audioRef} src={url} loop preload="none" />
       <a
         href={url}
         download
@@ -97,6 +94,25 @@ function HighlightedText({ text }: { text: string }) {
   )
 }
 
+function slowScrollTo(id: string, duration = 2500) {
+  const el = document.getElementById(id)
+  if (!el) return
+  const startY = window.scrollY
+  const targetY = el.getBoundingClientRect().top + startY - 16
+  const distance = targetY - startY
+  const startTime = performance.now()
+
+  const step = (now: number) => {
+    const elapsed = now - startTime
+    const t = Math.min(elapsed / duration, 1)
+    const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+    window.scrollTo(0, startY + distance * eased)
+    if (t < 1) requestAnimationFrame(step)
+  }
+
+  requestAnimationFrame(step)
+}
+
 export function StepsSection() {
   const [ref, isVisible] = useInView({ threshold: 0.1, triggerOnce: true })
 
@@ -142,13 +158,13 @@ export function StepsSection() {
           </ol>
 
           <div className="mt-12 pt-8 border-t border-[#222]">
-            <a
-              href="#reglamento"
+            <button
+              onClick={() => slowScrollTo('reglamento')}
               className="inline-flex items-center gap-3 font-sans text-sm tracking-[0.2em] uppercase font-medium text-[#808080] hover:text-[#0A80AB] transition-colors duration-300 group"
             >
               <span className="w-8 h-px bg-current transition-all duration-300 group-hover:w-12" />
               Ver reglamento completo
-            </a>
+            </button>
           </div>
         </div>
       </div>

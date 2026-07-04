@@ -4,7 +4,7 @@ import React from 'react'
 
 export function HeroSection() {
   const scrollToRules = () => {
-    const el = document.getElementById('pasos')
+    const el = document.getElementById('como')
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })
     }
@@ -64,7 +64,7 @@ export function HeroSection() {
               className="absolute inset-0 bg-[#0A80AB] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out"
               style={{ zIndex: -1 }}
             />
-            Ver bases del concurso
+            Ver video del concurso
           </button>
         </div>
       </div>
