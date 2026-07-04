@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="120" rx="18" fill="#080808"/>
+  <!-- Bar (blue) -->
+  <rect x="43" y="12" width="34" height="13" rx="2" fill="#0A80AB"/>
+  <!-- Ring (white) -->
+  <circle cx="60" cy="85" r="27" stroke="#ffffff" stroke-width="17" fill="none"/>
+</svg>
