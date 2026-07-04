@@ -10,9 +10,8 @@ export async function GET() {
     return new NextResponse('No disponible', { status: 502 })
   }
 
-  const buffer = await upstream.arrayBuffer()
-
-  return new NextResponse(buffer, {
+  // Stream the body directly — avoids buffering 16MB in the serverless function
+  return new NextResponse(upstream.body, {
     headers: {
       'Content-Type': 'audio/wav',
       'Content-Disposition': 'attachment; filename="abasi-solo-contest-backing-track.wav"',
