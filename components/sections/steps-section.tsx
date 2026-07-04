@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { STEPS } from '@/lib/content'
 import { useInView } from '@/hooks/use-in-view'
 
@@ -13,15 +13,6 @@ function TrackDownload({ url, label }: { url: string; label: string }) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const rafRef = useRef<number | null>(null)
 
-  useEffect(() => {
-    audioRef.current = new Audio(url)
-    audioRef.current.loop = true
-    return () => {
-      audioRef.current?.pause()
-      if (rafRef.current) cancelAnimationFrame(rafRef.current)
-    }
-  }, [url])
-
   const tick = () => {
     const audio = audioRef.current
     if (!audio || !audio.duration) return
@@ -30,15 +21,25 @@ function TrackDownload({ url, label }: { url: string; label: string }) {
   }
 
   const toggle = () => {
-    if (!audioRef.current) return
     if (playing) {
-      audioRef.current.pause()
+      audioRef.current?.pause()
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
-    } else {
-      audioRef.current.play()
-      rafRef.current = requestAnimationFrame(tick)
+      setPlaying(false)
+      return
     }
-    setPlaying((p) => !p)
+
+    // Create audio lazily on first tap — required for iOS Safari
+    if (!audioRef.current) {
+      audioRef.current = new Audio(url)
+      audioRef.current.loop = true
+    }
+
+    audioRef.current.play().then(() => {
+      rafRef.current = requestAnimationFrame(tick)
+      setPlaying(true)
+    }).catch(() => {
+      // Silently ignore — browser policy blocked playback
+    })
   }
 
   return (
