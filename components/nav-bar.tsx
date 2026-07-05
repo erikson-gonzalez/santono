@@ -53,7 +53,7 @@ export function NavBar() {
           >
             <Image
               src="/santono-logo.webp"
-              alt="Santono Music"
+              alt="Santōno Music"
               width={200}
               height={200}
               className="h-28 w-auto"

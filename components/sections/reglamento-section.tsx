@@ -191,7 +191,7 @@ export function ReglamentoSection() {
           <div className="flex items-center gap-4 mb-2">
             <LogoMark size={52} ringColor="#ffffff" barColor="#0A80AB" />
             <h2 className="font-display text-[clamp(2.4rem,6vw,5rem)] leading-none tracking-widest text-white">
-              SANTONO MUSIC
+              SANTŌNO MUSIC
             </h2>
           </div>
           <p className="font-sans text-[#0A80AB] text-sm tracking-[0.3em] uppercase font-medium">

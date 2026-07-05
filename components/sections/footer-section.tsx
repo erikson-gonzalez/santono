@@ -29,7 +29,7 @@ export function FooterSection() {
         </div>
 
         <p className="font-sans text-xs text-[#444] tracking-wide">
-          &copy; {new Date().getFullYear()} Santono Music. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} Santōno Music. Todos los derechos reservados.
         </p>
 
         <p className="font-sans text-xs text-[#444] tracking-wide">

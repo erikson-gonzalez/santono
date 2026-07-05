@@ -11,7 +11,7 @@ import { FooterSection } from '@/components/sections/footer-section'
 export const metadata: Metadata = {
   title: 'Santono',
   description:
-    'Participa en el concurso de guitar solo organizado por Santono Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
+    'Participa en el concurso de guitar solo organizado por Santōno Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
 }
 
 const HOW_TO_VIDEO_ID = 'iozbDwReINQ'

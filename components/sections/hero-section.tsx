@@ -52,7 +52,7 @@ export function HeroSection() {
           </h1>
 
           <p className="font-sans text-[#A0A0A0] text-sm md:text-base font-light tracking-[0.2em] uppercase mb-10">
-            Organizado por Santono Music · Distribuidor Oficial de Abasi Concepts
+            Organizado por Santōno Music · Distribuidor Oficial de Abasi Concepts
           </p>
 
           <button

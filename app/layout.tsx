@@ -26,20 +26,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Santono',
   description:
-    'Participa en el concurso de guitar solo organizado por Santono Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
+    'Participa en el concurso de guitar solo organizado por Santōno Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
   openGraph: {
-    title: 'Abasi Solo Contest — Santono Music',
+    title: 'Abasi Solo Contest — Santōno Music',
     description:
-      'Participa en el concurso de guitar solo organizado por Santono Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
+      'Participa en el concurso de guitar solo organizado por Santōno Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
     images: ['/opengraph.jpg'],
     locale: 'es_CR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Abasi Solo Contest — Santono Music',
+    title: 'Abasi Solo Contest — Santōno Music',
     description:
-      'Participa en el concurso de guitar solo organizado por Santono Music.',
+      'Participa en el concurso de guitar solo organizado por Santōno Music.',
     images: ['/opengraph.jpg'],
   },
 }
