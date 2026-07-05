@@ -5,9 +5,9 @@ import React from 'react'
 export function HeroSection() {
   const scrollToRules = () => {
     const el = document.getElementById('como')
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
+    if (!el) return
+    const top = el.getBoundingClientRect().top + window.scrollY
+    window.scrollTo({ top, behavior: 'smooth' })
   }
 
   return (
