@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     'Participa en el concurso de guitar solo organizado por Santōno Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
 }
 
-const HOW_TO_VIDEO_ID = 'iozbDwReINQ'
-const DEMO_VIDEO_ID = 'tG371rgCKEw'
+const HOW_TO_VIDEO_ID = '3FKIRjeRzy8'
+const DEMO_VIDEO_ID = 'im3KJGnqxGQ'
 
 export default function AbasiSoloContestPage() {
   return (

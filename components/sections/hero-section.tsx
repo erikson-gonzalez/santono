@@ -13,7 +13,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100dvh] flex items-end overflow-hidden bg-[#080808]"
+      className="relative min-h-[max(100dvh,780px)] flex items-end overflow-hidden bg-[#080808]"
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
