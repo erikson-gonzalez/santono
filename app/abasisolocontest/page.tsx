@@ -9,7 +9,7 @@ import { ReglamentoSection } from '@/components/sections/reglamento-section'
 import { FooterSection } from '@/components/sections/footer-section'
 
 export const metadata: Metadata = {
-  title: 'Abasi Solo Contest — Santono Music',
+  title: 'Santono',
   description:
     'Participa en el concurso de guitar solo organizado por Santono Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
 }

@@ -24,7 +24,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Abasi Solo Contest — Santono Music',
+  title: 'Santono',
   description:
     'Participa en el concurso de guitar solo organizado por Santono Music, distribuidor oficial de Abasi Concepts en Costa Rica.',
   openGraph: {
