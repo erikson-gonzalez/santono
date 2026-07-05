@@ -5,7 +5,7 @@ import { STEPS } from '@/lib/content'
 import { useInView } from '@/hooks/use-in-view'
 
 const AUDIO_URL =
-  'https://pub-756796fc141b4e239c1fcdf4273a17f5.r2.dev/assets/abasi-solo-contest-backing-track.wav'
+  'https://pub-756796fc141b4e239c1fcdf4273a17f5.r2.dev/assets/abasi-solo-contest-backing-track.mp3'
 
 function TrackDownload({ url, label }: { url: string; label: string }) {
   const [playing, setPlaying] = useState(false)
@@ -40,7 +40,7 @@ function TrackDownload({ url, label }: { url: string; label: string }) {
   return (
     <>
       {/* Hidden audio element — more reliable on iOS Safari than new Audio() */}
-      <audio ref={audioRef} src={url} loop preload="none" />
+      <audio ref={audioRef} src={AUDIO_URL} loop preload="none" />
       <a
         href={url}
         download

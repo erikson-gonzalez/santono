@@ -34,11 +34,11 @@ export const DEMO_SUBTEXT =
 
 export const PRIZE_ITEMS = [
   {
-    name: 'Pedal Abasi Pathos',
+    name: 'Pedal de distorsión Abasi Pathos',
     url: 'https://abasiconcepts.com/collections/in-stock/products/pathos',
   },
   {
-    name: 'Pedal Micro-Aggressor',
+    name: 'Pedal compresor Abasi Micro-Aggressor',
     url: 'https://abasiconcepts.com/products/micro-aggressor',
   },
   {
@@ -46,7 +46,7 @@ export const PRIZE_ITEMS = [
     url: 'https://abasiconcepts.com/collections/in-stock/products/abasi-short-sleeve-t-shirt',
   },
   {
-    name: 'Pack de cuerdas Abasi (7-string)',
+    name: 'Paquete de cuerdas Abasi',
     url: 'https://abasiconcepts.com/collections/in-stock/products/4-pack-abasi-nickel-would-electric-guitar-strings-7-string-set',
   },
   {

@@ -116,9 +116,9 @@ function ReglamentoContent() {
         <ul className="space-y-1 mb-2">
           <li><B>Pedal de distorsión Abasi Pathos</B></li>
           <li><B>Pedal compresor Abasi Micro-Aggressor</B></li>
-          <li>Camiseta oficial Abasi Concepts</li>
-          <li>Paquete de cuerdas Abasi</li>
-          <li>Faja oficial Abasi</li>
+          <li><B>Camiseta oficial Abasi Concepts</B></li>
+          <li><B>Paquete de cuerdas Abasi</B></li>
+          <li><B>Faja oficial Abasi</B></li>
         </ul>
         <p className="text-xs text-[#555]">El ganador será invitado (opcionalmente) a tocar en vivo en la <B>Clínica Abasi x Santōno, 29 de Agosto 2026, Music Factory</B>.</p>
       </div>
